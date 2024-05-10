@@ -15,13 +15,13 @@ terraform {
 
 provider "google" {
   project     = "acme-tfc-demo"
-  region      = "us-west1"
+  region      = "us-west3"
 }
 
 resource "google_compute_instance" "vm_instance" {
   name         = "my-vm-instance"
   machine_type = "n1-standard-1"
-  
+  zone         = "us-west3-a"
 
   boot_disk {
     initialize_params {
