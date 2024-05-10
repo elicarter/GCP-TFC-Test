@@ -21,7 +21,7 @@ provider "google" {
 resource "google_compute_instance" "vm_instance" {
   name         = "my-vm-instance"
   machine_type = "n1-standard-1"
-  zone         = "us-west1-a"
+  
 
   boot_disk {
     initialize_params {
