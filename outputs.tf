@@ -1,3 +1,3 @@
-output "instances_details" {
-  description = "List of all details for compute instances"
-  sensitive   = true
+output "ip" {
+  value = google_compute_instance.vm_instance.network_interface.0.network_ip
+}
